@@ -1,0 +1,345 @@
+/* Import Data */
+
+-- to create a database
+-- CREATE DATABASE cyclistic;
+
+USE cyclistic;
+-- to set SQL Modes
+SET GLOBAL local_infile = TRUE;    
+-- to load data for first month
+
+-- to create monthly table
+CREATE TABLE october21(
+		ride_id varchar(255),
+	rideable_type varchar(255),
+    start_at datetime,
+    end_at datetime,
+    start_station_name varchar(255),
+    start_station_id float,
+    end_station_name varchar(255),
+    end_station_id float,
+    start_lat float,
+    start_lng float,
+    end_lat float,
+    end_lng float,
+    member_casual varchar(255)
+    );
+
+LOAD DATA LOCAL INFILE 'C:/Users/Layefa/Documents/Bike_Share_CSV/202110-divvy-tripdata.csv' INTO TABLE october21
+FIELDS TERMINATED BY ','
+ENCLOSED BY ""
+LINES TERMINATED BY '\r\n'
+IGNORE 1 ROWS;
+
+
+CREATE TABLE november21(
+		ride_id varchar(255),
+	rideable_type varchar(255),
+    start_at datetime,
+    end_at datetime,
+    start_station_name varchar(255),
+    start_station_id float,
+    end_station_name varchar(255),
+    end_station_id float,
+    start_lat float,
+    start_lng float,
+    end_lat float,
+    end_lng float,
+    member_casual varchar(255)
+    );
+    
+    LOAD DATA LOCAL INFILE 'C:/Users/Layefa/Documents/Bike_Share_CSV/202111-divvy-tripdata.csv' INTO TABLE november21
+FIELDS TERMINATED BY ','
+ENCLOSED BY ""
+LINES TERMINATED BY '\r\n'
+IGNORE 1 ROWS;
+
+CREATE TABLE december21(
+		ride_id varchar(255),
+	rideable_type varchar(255),
+    start_at datetime,
+    end_at datetime,
+    start_station_name varchar(255),
+    start_station_id float,
+    end_station_name varchar(255),
+    end_station_id float,
+    start_lat float,
+    start_lng float,
+    end_lat float,
+    end_lng float,
+    member_casual varchar(255)
+    );
+    
+    LOAD DATA LOCAL INFILE 'C:/Users/Layefa/Documents/Bike_Share_CSV/202112-divvy-tripdata.csv' INTO TABLE december21
+FIELDS TERMINATED BY ','
+ENCLOSED BY ""
+LINES TERMINATED BY '\r\n'
+IGNORE 1 ROWS;
+
+
+CREATE TABLE january22(
+		ride_id varchar(255),
+	rideable_type varchar(255),
+    start_at datetime,
+    end_at datetime,
+    start_station_name varchar(255),
+    start_station_id float,
+    end_station_name varchar(255),
+    end_station_id float,
+    start_lat float,
+    start_lng float,
+    end_lat float,
+    end_lng float,
+    member_casual varchar(255)
+    );
+    
+    LOAD DATA LOCAL INFILE 'C:/Users/Layefa/Documents/Bike_Share_CSV/202201-divvy-tripdata.csv' INTO TABLE january22
+FIELDS TERMINATED BY ','
+ENCLOSED BY ""
+LINES TERMINATED BY '\r\n'
+IGNORE 1 ROWS;
+
+
+CREATE TABLE february22(
+		ride_id varchar(255),
+	rideable_type varchar(255),
+    start_at datetime,
+    end_at datetime,
+    start_station_name varchar(255),
+    start_station_id float,
+    end_station_name varchar(255),
+    end_station_id float,
+    start_lat float,
+    start_lng float,
+    end_lat float,
+    end_lng float,
+    member_casual varchar(255)
+    );
+    
+    LOAD DATA LOCAL INFILE 'C:/Users/Layefa/Documents/Bike_Share_CSV/202202-divvy-tripdata.csv' INTO TABLE february22
+FIELDS TERMINATED BY ','
+ENCLOSED BY ""
+LINES TERMINATED BY '\r\n'
+IGNORE 1 ROWS;
+
+
+
+CREATE TABLE march22(
+		ride_id varchar(255),
+	rideable_type varchar(255),
+    start_at datetime,
+    end_at datetime,
+    start_station_name varchar(255),
+    start_station_id float,
+    end_station_name varchar(255),
+    end_station_id float,
+    start_lat float,
+    start_lng float,
+    end_lat float,
+    end_lng float,
+    member_casual varchar(255)
+    );
+    
+    LOAD DATA LOCAL INFILE 'C:/Users/Layefa/Documents/Bike_Share_CSV/202203-divvy-tripdata.csv' INTO TABLE march22
+FIELDS TERMINATED BY ','
+ENCLOSED BY ""
+LINES TERMINATED BY '\r\n'
+IGNORE 1 ROWS;
+
+
+CREATE TABLE april22(
+		ride_id varchar(255),
+	rideable_type varchar(255),
+    start_at datetime,
+    end_at datetime,
+    start_station_name varchar(255),
+    start_station_id float,
+    end_station_name varchar(255),
+    end_station_id float,
+    start_lat float,
+    start_lng float,
+    end_lat float,
+    end_lng float,
+    member_casual varchar(255)
+    );
+    
+    LOAD DATA LOCAL INFILE 'C:/Users/Layefa/Documents/Bike_Share_CSV/202204-divvy-tripdata.csv' INTO TABLE april22
+FIELDS TERMINATED BY ','
+ENCLOSED BY ""
+LINES TERMINATED BY '\r\n'
+IGNORE 1 ROWS;
+
+
+CREATE TABLE may2022(
+		ride_id varchar(255),
+	rideable_type varchar(255),
+    start_at datetime,
+    end_at datetime,
+    start_station_name varchar(255),
+    start_station_id float,
+    end_station_name varchar(255),
+    end_station_id float,
+    start_lat float,
+    start_lng float,
+    end_lat float,
+    end_lng float,
+    member_casual varchar(255)
+    );
+    
+    LOAD DATA LOCAL INFILE 'C:/Users/Layefa/Documents/Bike_Share_CSV/202205-divvy-tripdata.csv' INTO TABLE may2022
+FIELDS TERMINATED BY ','
+ENCLOSED BY ""
+LINES TERMINATED BY '\r\n'
+IGNORE 1 ROWS;
+
+
+CREATE TABLE june22(
+		ride_id varchar(255),
+	rideable_type varchar(255),
+    start_at datetime,
+    end_at datetime,
+    start_station_name varchar(255),
+    start_station_id float,
+    end_station_name varchar(255),
+    end_station_id float,
+    start_lat float,
+    start_lng float,
+    end_lat float,
+    end_lng float,
+    member_casual varchar(255)
+    );
+    
+    LOAD DATA LOCAL INFILE 'C:/Users/Layefa/Documents/Bike_Share_CSV/202206-divvy-tripdata.csv' INTO TABLE june22
+FIELDS TERMINATED BY ','
+ENCLOSED BY ""
+LINES TERMINATED BY '\r\n'
+IGNORE 1 ROWS;
+
+
+CREATE TABLE july22(
+		ride_id varchar(255),
+	rideable_type varchar(255),
+    start_at datetime,
+    end_at datetime,
+    start_station_name varchar(255),
+    start_station_id float,
+    end_station_name varchar(255),
+    end_station_id float,
+    start_lat float,
+    start_lng float,
+    end_lat float,
+    end_lng float,
+    member_casual varchar(255)
+    );
+    
+    LOAD DATA LOCAL INFILE 'C:/Users/Layefa/Documents/Bike_Share_CSV/202207-divvy-tripdata.csv' INTO TABLE july22
+FIELDS TERMINATED BY ','
+ENCLOSED BY ""
+LINES TERMINATED BY '\r\n'
+IGNORE 1 ROWS;
+
+
+CREATE TABLE august22(
+		ride_id varchar(255),
+	rideable_type varchar(255),
+    start_at datetime,
+    end_at datetime,
+    start_station_name varchar(255),
+    start_station_id float,
+    end_station_name varchar(255),
+    end_station_id float,
+    start_lat float,
+    start_lng float,
+    end_lat float,
+    end_lng float,
+    member_casual varchar(255)
+    );
+    
+    LOAD DATA LOCAL INFILE 'C:/Users/Layefa/Documents/Bike_Share_CSV/202208-divvy-tripdata.csv' INTO TABLE august22
+FIELDS TERMINATED BY ','
+ENCLOSED BY ""
+LINES TERMINATED BY '\r\n'
+IGNORE 1 ROWS;
+
+
+
+CREATE TABLE september22(
+		ride_id varchar(255),
+	rideable_type varchar(255),
+    start_at datetime,
+    end_at datetime,
+    start_station_name varchar(255),
+    start_station_id float,
+    end_station_name varchar(255),
+    end_station_id float,
+    start_lat float,
+    start_lng float,
+    end_lat float,
+    end_lng float,
+    member_casual varchar(255)
+    );
+    
+    LOAD DATA LOCAL INFILE 'C:/Users/Layefa/Documents/Bike_Share_CSV/202209-divvy-tripdata.csv' INTO TABLE september22
+FIELDS TERMINATED BY ','
+ENCLOSED BY ""
+LINES TERMINATED BY '\r\n'
+IGNORE 1 ROWS;
+
+
+-- CREATE TABLE all_year_trip (
+	ride_id varchar(255),
+    rideable_type varchar(255),
+    started_at datetime,
+    ended_at datetime,
+    start_station_name varchar(255),
+    start_station_id double,
+    end_station_name varchar(255),
+    end_station_id double,
+    start_lat float,
+    start_lng float,
+    end_lat float,
+    end_lng float,
+    member_casual varchar(255));
+
+
+# merge all 12 months data into a single table
+
+INSERT INTO all_year_trip
+SELECT *
+FROM october21
+UNION ALL 
+SELECT *
+FROM november21
+UNION ALL 
+SELECT *
+FROM december21
+UNION ALL 
+SELECT *
+FROM january22
+UNION ALL 
+SELECT *
+FROM february22
+UNION ALL 
+SELECT *
+FROM march22
+UNION ALL 
+SELECT *	
+FROM april22
+UNION ALL 
+SELECT *
+FROM may2022
+UNION ALL 
+SELECT *
+FROM june22
+UNION ALL 
+SELECT * 
+FROM july22
+UNION ALL 
+SELECT *
+FROM august22
+UNION ALL 
+SELECT * 
+FROM september22
+
+	
+
