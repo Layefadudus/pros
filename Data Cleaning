@@ -1,1 +1,13 @@
+USE cyclistic;
 
+SELECT *
+	
+# to set all blank fields in the "start_station_name and end_station_name" to NULL
+
+UPDATE [LOW_PRIORITY] [IGNORE] all_year_trip
+set start_station_name = NULL 
+where start_station_name = ' '
+
+UPDATE [LOW_PRIORITY] [IGNORE] all_year_trip  
+SET end_station_name = NULL 
+WHERE end_station_name = ' '
