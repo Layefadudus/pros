@@ -1,0 +1,95 @@
+# Installing packages
+
+install.packages("tidyverse")
+install.packages("janitor")
+install.packages("lubridate")
+install.packages("devtools")
+install.packages("psych")
+install.packages("hunspell")
+install.packages("hrbrthemes")
+install.packages("ggplot2")
+install.packages("tidyr")
+install.packages("skimr")
+install.packages("readxl")
+install.packages("readr")
+install.packages("dplyr")
+install.packages("data.table")
+
+# load packages
+
+library(tidyverse)
+library(lubridate)
+library(janitor)
+library(data.table)
+library(readr)
+library(psych)
+library(hrbrthemes)
+library(ggplot2)
+library(dplyr)
+library(skimr)
+library(readxl)
+library(tidyr)
+library(hunspell)
+library(devtools)
+
+# working environment setup
+
+setwd("C:/Users/Layefa/Documents/Bike_Share_CSV/")
+
+
+# loading all 12 months data From Oct2021 to Sept2022
+
+oct21 <- read.csv("202110-divvy-tripdata.csv")
+nov21 <- read.csv("202111-divvy-tripdata.csv")
+dec21 <- read.csv("202112-divvy-tripdata.csv")
+jan22 <- read.csv("202201-divvy-tripdata.csv")
+feb22 <- read.csv("202202-divvy-tripdata.csv")
+mar22 <- read.csv("202203-divvy-tripdata.csv")
+apr22 <- read.csv("202204-divvy-tripdata.csv")
+may22 <- read.csv("202205-divvy-tripdata.csv")
+jun22 <- read.csv("202206-divvy-tripdata.csv")
+jul22 <- read.csv("202207-divvy-tripdata.csv")
+aug22 <- read.csv("202208-divvy-tripdata.csv")
+sept22 <- read.csv("202209-divvy-tripdata.csv")
+
+# total number of record in all 12 months. 5,0150,44 rows and 13 columns
+
+sum(nrow(oct21) + nrow(nov21) + nrow(dec21) 
+                + nrow(jan22) + nrow(feb22) 
+                + nrow(mar22) + nrow(apr22) 
+                + nrow(may22) + nrow(jun22) 
+                + nrow(jul22) + nrow(sept22))
+
+# check column names to see consistency
+
+colnames(oct21)
+colnames(nov21)
+colnames(dec21)
+colnames(jan22)
+colnames(feb22)
+colnames(mar22)
+colnames(apr22)
+colnames(may22)
+colnames(jun22)
+colnames(jul22)
+colnames(aug22)
+colnames(sept22)
+
+# compare columns to check for error
+
+compare_df_cols(oct21, nov21, dec21, jan22, feb22, mar22, apr22, may22, jun22, 
+                 jul22, aug22, sept22, return = "mismatch")
+
+
+# to convert mar22 from "character"  to "nummeric" --- this gave an error.
+mutate(mar22, ('end_lat', 'end_lng'), as.numeric)
+
+
+# either codes below gave an error message
+trip_total <- rbind(oct21, nov21, dec21, jan22, feb22, mar22, apr22, may22, jun22, 
+                        jul22, aug22, sept22,)
+                    
+trip_total <- bind_rows(oct21, nov21, dec21, jan22, feb22, mar22, apr22, may22, jun22, 
+                        jul22, aug22, sept22,)
+
+
